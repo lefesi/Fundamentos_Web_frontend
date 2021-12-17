@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aquacontato</title>
+   
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>
-        Contate-me
-    </h1>
-    <ul>
+   
+
+    <div class="container">
+
+        <div>
+
+        </div>
+    </div>
+    <ul id="menu">
         <li>
             <a href="index.html">Home</a>
         </li>
@@ -18,30 +25,57 @@
         <a href="contato.html">Contato</a>
     </li>
     </ul>
-    <form> 
-        <label for="nome">Nome:</label>  <br>
-        <input type="text" id="nome">
-        <br>
-        <label for="email">E-mail:</label>  <br>
-        <input type="email" id="email">
-        <br>
-        <label for="assunto">Assunto:</label>  <br>
-      <textarea name="assunto" id="assunto" cols="30" rows="10"></textarea>
-      <button>Enviar </button>
-    </form>
+    <div class="container mb-100">
+        <>
+            <h1 class="center">
+                Contate-me
+            </h1>
+            <form > 
+                <label width = '100%' for="nome">Nome:</label>  <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
 
-    <h2>
-        Endereço:
-    </h2>
-<p>
-    Marrickville Nova Gales do Sul 2204 
-</p>
-<p>
-    Sydney - Austrália
-</p>
+              <div id="txtNome"></div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26488.969365627094!2d151.13831049665419!3d-33.912280861214214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1cb87972859%3A0x1c017d6b3fba8a30!2sMarrickville%20Nova%20Gales%20do%20Sul%202204%2C%20Austr%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1637705932044!5m2!1spt-BR!2sbr" 
-width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               
+                <label for="email">E-mail:</label>  <br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
+                <br>
+                <label for="assunto">Assunto:</label>  <br>
+                <br>
+              <textarea name="assunto" id="assunto" cols="30" rows="10"></textarea>
+              <div id="txtAssunto"></div>
+              <button>Enviar </button>
+            </form>
+         
+            <h2>
+                Endereço:
+            </h2>
+        <p>
+            Marrickville Nova Gales do Sul 2204 
+        </p>
+        <p>
+            Sydney - Austrália
+        </p>
+        
+        <iframe id="mapa " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26488.969365627094!2d151.13831049665419!3d-33.912280861214214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1cb87972859%3A0x1c017d6b3fba8a30!2sMarrickville%20Nova%20Gales%20do%20Sul%202204%2C%20Austr%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1637705932044!5m2!1spt-BR!2sbr" 
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" onmausemove ="mapaZoom"  onmauseout ="mapaNormal"></iframe>
+         
+        
+            
+        </div>
+    </div>
 
+    <hr>
+    <footer class="container">
+         Letícia Fesi &copy 
+         <i class="fab fa-linkedin"></i>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+
+    
 </body>
+
+
 </html>
